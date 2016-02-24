@@ -1,7 +1,7 @@
 # Link4U [September 2015]
 Web application for creating own board on website with important for us links.
 
-## Technologies:
+## Technologies
 1. Frontend:
   - jQuery and Ajax
   - CSS3
@@ -27,11 +27,24 @@ User can:
 2. Check (and update if there are different details for your database) file `datasource.xml`.
 3. Download all dependencies with using maven.
 4. Deploy web service (e.g. Tomcat or Glassfish) with Link4U resource.
-5. Open browser with `http://localhost:8080/Link4U/login.html` address.
+5. Open browser with `http://localhost:8080/Link4U/login.html` address.<br />
+You can use `admin` and `admin` for username and password (example account).
 
 ## Screens from running application
 
-1) Homepage
-2) Registration
-3) Login
-4) Homepage after login
+1) Login:<br />
+![alt text][login_img]
+
+2) Homepage:<br />
+![alt text][homepage_img]
+
+3) Add link:<br />
+![alt text][add_link_img]
+
+4) Edit link:<br />
+![alt text][edit_link_img]
+
+[login_img]: https://github.com/palprz/link4u/blob/master/markdown_img_login.png
+[homepage_img]: https://github.com/palprz/link4u/blob/master/markdown_img_homepage.png
+[add_link_img]: https://github.com/palprz/link4u/blob/master/markdown_img_add_link.png
+[edit_link_img]: https://github.com/palprz/link4u/blob/master/markdown_img_edit_link.png
