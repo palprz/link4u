@@ -1,0 +1,332 @@
+// Main color: #6C0070 -> top and bottom bars
+// Alternate for main color: #9E42A3
+// Second color: #78D1F4 -> bars with genres 
+// Text color: #FFF
+
+body {
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	background-color: #FFF;
+	color: #6C0070;
+}
+body {
+	margin: 0;
+}
+
+a { }
+a:hover { color: #FFF; background-color: #9E42A3; }
+p { margin: 10px 0px; }
+
+/*========= TOP =========*/
+
+#topwrap {
+	width: 100%;
+	height: 50px;
+	background-color: #6C0070;
+}
+
+#topcontent {
+	max-width: 960px;
+	margin: auto;
+	line-height: 50px;
+	font-weight: bold;	
+}
+
+#nameofsite {
+	float: left;
+	width: 35%;
+	font-size: 20px;
+}
+
+#nameofsite .special {
+	color: #78D1F4;
+}
+
+#nameofsite .homepage {
+	color: #FFF;
+	text-decoration: none;
+}
+
+#nameofsite .homepage:hover {
+	color: #78D1F4;
+	background: #6C0070;
+}
+
+/*=== PANEL OF USER ===*/
+
+#panelofuser {
+	float: right;
+	width: 65%;
+	font-size: 16px;
+}
+
+#panelofuser > a {
+	color: #FFF;
+}
+
+#panelofuser > a > div {
+	float: right;
+	margin: 0px 2%;
+	padding: 0px 1%;
+}
+
+#panelofuser > a > div:hover {
+	background-color: #78D1F4;
+}
+
+/*========= MIDDLE =========*/
+
+#maincontent {
+	max-width: 960px;
+	margin: auto;
+	background-color: #FFF;
+}
+
+#maincontent > .left {
+	float: left;
+	width: 70%;
+}
+
+#maincontent > .left > form {
+	padding: 15px 0px;
+}
+
+#maincontent > .right {
+	float: right;
+	width: 30%;
+	min-height: 170px;
+}
+
+#maincontent > .right > .nameofsite {
+	font-size: 26px;
+	padding: 5px;
+}
+
+#maincontent > .right > .description {
+	padding: 15px 5px;
+	background-color: #78D1F4;
+}
+
+#genres {
+	margin: 20px 0px;
+}
+
+/*=== ADD GENRE ===*/
+#genres > .addcontent {
+	clear: both;
+	width: 30%;
+	padding: 5px 0px;
+}
+
+#genres > .addcontent > .add {
+	width: 20px;
+	height: 20px;
+	padding-right: 100%;
+	background-color: #78D1F4;
+}
+
+#genres > .addcontent > .add:hover {
+	cursor: pointer;
+	background-color: #9E42A3;
+}
+
+#genres > .addcontent > .addgenre {
+	display: none;
+}
+
+/*=== ADD GENRE FORM ===*/
+
+#formgenre div {
+	clear: left;
+	float: left;
+	margin: 3px 0px;
+}
+
+#formgenre input {
+	clear: right;
+	float: right;
+	margin: 3px 0px;
+}
+
+/*=== GENRE ===*/
+.genre {
+	clear: both;
+	width: 100%;
+}
+
+.genre > .name {
+	padding-left: 10px;
+	height: 20px;
+	line-height: 20px;
+	background-color: #78D1F4;
+}
+
+/*=== ADD LINK ===*/
+
+.genre > .addcontent {
+	clear: both;
+	float: right;
+	width: 30%;
+	margin: 3px 0px 15px 0px;
+	min-height: 20px;
+}
+
+.genre > .addcontent > .add {
+	float: right;
+	width: 20px;
+	height: 20px;
+	padding-left: 100%;
+	background-color: #EEE;
+}
+
+.genre > .addcontent > .add:hover {
+	cursor: pointer;
+	background-color: #78D1F4;
+}
+
+.genre > .addcontent > .addlink {
+	display: none;
+}
+
+/*=== ADD LINK FORM ===*/
+
+#formlink div {
+	clear: left;
+	float: left;
+	margin: 3px 0px;
+}
+
+#formlink input {
+	clear: right;
+	float: right;
+	margin: 3px 0px;
+}
+
+/*=== EDIT LINK FORM ===*/
+.editlink {
+	clear: both;
+	float: left;
+	width: 100%;
+	margin: 5px 0px 20px 0px;
+}
+
+#formeditlink {
+	
+}
+
+#formeditlink > div {
+	float: left;
+	margin: 0px 1%;
+}
+
+#formeditlink > input {
+	float: left;
+	margin-right: 1%;
+}
+
+/*=== LINK ===*/
+
+.link {
+	clear: both;
+	width: 95%;
+	height: 20px;
+	margin: 6px 0px 6px 5%;
+	background-color: #EEE;
+	line-height: 20px;
+}
+
+.link > .address {
+	float: left;
+	width: 8%;
+	text-align: center;
+}
+
+.link > .description {
+	float: left;
+	width: 76%;
+	margin-left: 1%;
+}
+
+
+/*=== ICONS ===*/
+
+.settings {
+	float: right;
+	width: 10%;
+	min-width: 40px;
+	max-width: 50px;
+	height: 20px;
+	line-height: 20px;
+	text-align: center;
+}
+
+.settings > a > .edit {
+	float: left;
+	width: 18px;
+	background-color: #FFF;
+	border: 1px solid #AAA;
+	border-radius: 20%;
+}
+
+.settings > a:hover > .edit {
+	background-color: #9E42A3;
+	cursor: pointer;
+}
+
+.settings > a > .delete {
+	float: right;
+	width: 18px;
+	background-color: #FFF;
+	border: 1px solid #AAA;
+	border-radius: 20%;
+}
+
+.settings > a:hover > .delete {
+	background-color: #9E42A3;
+	cursor: pointer;
+}
+
+/*========= BOTTOM =========*/
+
+#bottomwrap {
+	clear: both;
+	width: 100%;
+	height: 40px;
+	background-color: #6C0070;
+}
+
+#bottomcontent {
+	max-width: 960px;
+	margin: auto;
+	color: #FFF;
+	line-height: 40px;
+	text-align: right;	
+}
+
+#bottomcontent > #privatepolicy {
+	float: left;
+	font-size: 12px;
+}
+
+#bottomcontent > #privatepolicy > a {
+	color: #FFF;
+}
+
+#bottomcontent > #author {
+	float: right;
+}
+
+/*========= MEDIA =========*/
+
+@media (min-width: 600px) { 
+	#topcontent, #maincontent, #bottomcontent {
+		width: 80%;
+	}
+}
+
+@media (max-width: 599px) {
+	#topcontent, #maincontent, #bottomcontent {
+		width: 95%;		
+	}
+}

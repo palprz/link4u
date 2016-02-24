@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd ">
+    
+    <import resource="classpath:spring/datasource.xml"/>
+    
+    <!-- Import data about connecting with database into controller of JDBC of user -->
+	<bean id="userJDBCTemplate" class="repository.UserJDBCTemplate">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+    <!-- Import data about connecting with database into controller of JDBC of genre -->
+	<bean id="genreJDBCTemplate" class="repository.GenreJDBCTemplate">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+	
+    <!-- Import data about connecting with database into controller of JDBC of link -->
+	<bean id="linkJDBCTemplate" class="repository.LinkJDBCTemplate">
+		<property name="dataSource" ref="dataSource"/>
+	</bean>
+		
+</beans>

@@ -1,0 +1,42 @@
+CREATE DATABASE `link4u`;
+
+CREATE TABLE `link4u`.`user` (
+	`id` INT(8) AUTO_INCREMENT PRIMARY KEY,
+	`username` VARCHAR(40) NOT NULL,
+	`password` VARCHAR(40) NOT NULL
+)	ENGINE=INNODB;
+
+CREATE TABLE `link4u`.`genre` (
+	`id` INT(8) AUTO_INCREMENT PRIMARY KEY,
+	`name` VARCHAR(30) NOT NULL,
+	`id_user` INT(8) NOT NULL
+)	ENGINE=INNODB;
+
+CREATE TABLE `link4u`.`link` (
+	`id` INT(8) AUTO_INCREMENT PRIMARY KEY,
+	`address` VARCHAR(100) NOT NULL,
+	`description` VARCHAR(100),
+	`id_user` INT(8) NOT NULL,
+	`id_genre` INT(8)
+)	ENGINE=INNODB;
+
+ALTER TABLE `link4u`.`genre`
+ADD FOREIGN KEY (`id_user`)
+REFERENCES `link4u`.`user`(`id`);
+
+ALTER TABLE `link4u`.`link`
+ADD FOREIGN KEY (`id_user`)
+REFERENCES `link4u`.`user`(`id`);
+
+ALTER TABLE `link4u`.`link`
+ADD FOREIGN KEY (`id_genre`)
+REFERENCES `link4u`.`genre`(`id`);
+
+INSERT INTO `link4u`.`user`(`id`, `username`, `password`) VALUES (1, 'admin', '21232f297a57a5a743894a0e4a801fc3'); -- admin, admin
+INSERT INTO `link4u`.`genre`(`id`, `name`, `id_user`) VALUES (1, 'Information', 1);
+INSERT INTO `link4u`.`genre`(`id`, `name`, `id_user`) VALUES (2, 'Music', 1);
+INSERT INTO `link4u`.`link`(`id`, `address`, `description`, `id_user`, `id_genre`) VALUES (1, 'http://www.google.com', 'Very nice site!', 1, 1);
+INSERT INTO `link4u`.`link`(`id`, `address`, `description`, `id_user`, `id_genre`) VALUES (2, 'http://www.bbc.com', 'Good site', 1, 1);
+INSERT INTO `link4u`.`link`(`id`, `address`, `description`, `id_user`, `id_genre`) VALUES (3, 'http://www.cnn.com', 'Not bad', 1, 1);
+INSERT INTO `link4u`.`link`(`id`, `address`, `description`, `id_user`, `id_genre`) VALUES (4, 'http://www.youtube.com', 'I need more sites like that!', 1, 2);
+INSERT INTO `link4u`.`link`(`id`, `address`, `description`, `id_user`, `id_genre`) VALUES (5, 'http://www.vimeo.com', 'Alternate for youtube', 1, 2);
