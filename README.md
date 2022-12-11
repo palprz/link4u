@@ -1,4 +1,4 @@
-# Link4U [September 2015]
+# Link4U
 Web application for creating own board on website with important for us links.
 
 ## Technologies
